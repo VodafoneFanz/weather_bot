@@ -5,7 +5,7 @@ import json
 import gzip
 
 
-async def judge_city(city: str):
+def judge_city(city: str):
     # 访问的url，其中urllib.parse.quote是将城市名转换为url的组件
     url = 'http://wthrcdn.etouch.cn/weather_mini?city=' + urllib.parse.quote(city)
     # 发出请求并读取到weather_data
