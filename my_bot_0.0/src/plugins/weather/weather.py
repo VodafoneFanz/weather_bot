@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 from nonebot import on_command
-from nonebot.rule import to_me, regex
+from nonebot.rule import regex
 from nonebot.adapters.cqhttp import Bot, Event
 from .get_weather import get_weather, judge_city
 

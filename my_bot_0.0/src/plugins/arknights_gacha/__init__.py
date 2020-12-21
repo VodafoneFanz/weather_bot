@@ -1,6 +1,5 @@
 import nonebot
 from nonebot import get_driver
-
 from .config import Config
 
 try:

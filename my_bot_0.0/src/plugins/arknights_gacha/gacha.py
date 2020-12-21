@@ -65,7 +65,7 @@ def gacha_init():
                         or key.endswith('hpsts') or key.endswith('savage') or key.endswith('grani') \
                         or key.endswith('flameb') or key.endswith('ceylon') or key.endswith('bison') \
                         or key.endswith('durnar') or key.endswith('ccheal') or key.endswith('blackd') \
-                        or key.endswith('ethan') \
+                        or key.endswith('ethan') or key.endswith('estell') \
                         or key.endswith('breeze') or key.endswith('snsant') or key.endswith('finlpp'):  # 后缀检测，去除公招限定
                     continue
                 operator_list[rarity - 2].append(key)
@@ -128,7 +128,7 @@ def gacha_get_list(roll_times):
             gachaList[1].append(get_gacha_item(3))
     return gachaList
 
-
+# 生成结果字符串
 def generate_data(gachaList: list):
     str = ""
     for i in range(len(gachaList[0])):

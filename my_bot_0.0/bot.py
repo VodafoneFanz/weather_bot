@@ -3,15 +3,16 @@
 
 import nonebot
 from  nonebot.adapters.cqhttp import Bot
+from nonebot.log import logger, default_format
 
 # Custom your logger
 # 
 # from nonebot.log import logger, default_format
-# logger.add("error.log",
-#            rotation="00:00",
-#            diagnose=False,
-#            level="ERROR",
-#            format=default_format)
+logger.add("error.log",
+           rotation="00:00",
+           diagnose=False,
+           level="ERROR",
+           format=default_format)
 
 # You can pass some keyword args config to init function
 # 初始化

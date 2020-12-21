@@ -1,12 +1,12 @@
 # -*- coding: utf-8 -*-
 
 from nonebot import on_command
-from nonebot.rule import regex
+from nonebot.rule import regex, to_me
 from nonebot.adapters.cqhttp import Bot, Event
 from .gacha import *
 
-arknights = on_command("抽卡", rule=regex(r"\d{1,2}$"), priority=4)
-
+arknights = on_command("抽卡", rule=regex(r"\w{1,2}$"), priority=5)
+# regex(r"\d{1,2}$")
 
 @arknights.handle()
 async def handle_first_receive(bot: Bot, event: Event, state: dict):
@@ -16,7 +16,7 @@ async def handle_first_receive(bot: Bot, event: Event, state: dict):
 
 
 @arknights.got("roll_times", prompt="单抽输入1, 十连输入10")
-async def handle_city(bot: Bot, event: Event, state: dict):
+async def handle_roll_times(bot: Bot, event: Event, state: dict):
     roll_times = state["roll_times"]
     # 在这里对参数进行验证
     if state["roll_times"] not in ["1", "10"]:
